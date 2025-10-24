@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking Form</title>
+</head>
+<body>
+    <center>
+        <h1>Hotel Room Booking Form</h1>
+    </center>
+    <form action="#" method="post" align="center">
+        <!-- full name -->
+        <lable for="fullname">Full name:</lable>
+        <input type="text" id="fullname" name="fullname" required>
+        <br><br>
+        <!-- email -->
+        <lable for="email">E mail:</lable>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <!-- phone number -->
+        <lable for="phone">Phone:</lable>
+        <input for="tel" id="phone" name="phone" required>
+        <br><br>
+        <!-- check-in & check-out -->
+        <lable for="checkin">Check-in Date:</lable>
+        <input type="date" id="checkin" name="checkin" required>
+        <br><br>
+        <lable for="checkout">Check-in Date:</lable>
+        <input type="date" id="checkout" name="checkout" required>
+        <br><br>
+        <!-- no of guest stayed -->
+        <lable for="guest">No. Of Guest:</lable>
+        <input type="number" id="guest" name="guest" min="1" max="10" required>
+        <br><br>
+        <!-- type of rooms -->
+        <lable for="room">Room Type:</lable>
+        <select id="room" name="room">
+            <option value="single">Single bed room</option>
+            <option value="Double">Double bed room</option>
+            <option value="delux">Delux bed room</option>
+            <option value="suite">suite</option>
+        </select>
+        <br><br>
+        <!-- Special request -->
+        <lable for="request">Special Request:</lable>
+        <textarea type="request" id="request" name="request" row="4" col="42"></textarea>
+        <br><br>
+        <!-- butoon -->
+        <input type="submit" value="Book Now">
+        <input type="reset" value="Reset form">
+    </form>
+<p>
+    <b>Name:</b>SHREYA SAWAN <br>
+    <b>Admission No</b>2025B15410261<br>
+    <b>Class & Section</b>CSE DS-3
+</p>
+</body>
+</html>
