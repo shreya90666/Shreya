@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Block and Inline Example</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        text-align: center;
+    }
+
+    
+    .title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+    .block-boxes {
+        width: 260px;
+        border: 3px solid #4d7cff;
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    .block-item {
+        background: #dce6ff;
+        border: 2px solid #4d7cff;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    .inline-boxes {
+        border: 3px solid #f7c85c;
+        border-radius: 12px;
+        padding: 20px;
+        display: inline-block;
+    }
+
+    .inline-item {
+        display: inline-block;
+        background: #fff3cd;
+        border: 2px solid #f7c85c;
+        border-radius: 10px;
+        padding: 20px 30px;
+        margin: 5px;
+        font-size: 18px;
+    }
+
+    .label {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="title">Major Versions of HTML</div>
+
+    <div class="wrapper">
+        <div>
+            <div class="block-boxes">
+                <div class="block-item">Box 1</div>
+                <div class="block-item">Box 2</div>
+                <div class="block-item">Box 3</div>
+                <div class="block-item">Box 4</div>
+            </div>
+            <div class="label">Block-Level Element</div>
+        </div>
+
+        <div>
+            <div class="inline-boxes">
+                <div class="inline-item">Box 1</div>
+                <div class="inline-item">Box 2</div>
+                <div class="inline-item">Box 3</div>
+                <div class="inline-item">Box 4</div>
+            </div>
+            <div class="label">Inline Element</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
