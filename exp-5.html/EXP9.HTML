@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 🔲 OUTER BOX */
+        .outer-box {
+            width: 95%;
+            margin: auto;
+            border: 3px solid black;
+            padding: 40px 20px;
+            background: #f3f3f3;
+        }
+
+        .title {
+            margin-bottom: 25px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* PRODUCT GRID */
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        
+        .card {
+            background: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0 12px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer-box">
+
+        <h2 class="title">Responsive Product Grid</h2>
+
+        <div class="container">
+
+            <div class="card">
+                <img src="https://via.placeholder.com/80" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>High-quality item with great features.</p>
+                <span class="price">₹499</span>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/80" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Durable and stylish for daily use.</p>
+                <span class="price">₹799</span>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/80" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Lightweight and comfortable.</p>
+                <span class="price">₹1,299</span>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/80" alt="Product 4">
+                <h3>Product 4</h3>
+                <p>Trendy design with premium quality.</p>
+                <span class="price">₹999</span>
+            </div>
+
+        </div>
+    </div>
+  
+    <P>SHREYA SAWAN</P>
+    <P>2025B15410261</P>
+</body>
+</html>

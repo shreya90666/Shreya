@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Navigation — matched to screenshot</title>
+
+<style>
+  
+  body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 24px;
+    background: #fff;
+    color: #111;
+  }
+
+  h1.output {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+  }
+
+  
+  .frame {
+    border: 2px solid #222;       
+    width: 92%;
+    margin: 10px auto;
+    box-sizing: border-box;
+    padding: 8px;
+    background: #fff;
+  }
+
+  
+  .topbar {
+    background: #d9d9d9;
+    padding: 12px 16px;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+  
+  }
+  .topbar::after{
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    background: rgba(255,255,255,0.45);
+    border-radius: 1px;
+    opacity: .9;
+  }
+
+  .title {
+    font-size: 18px;
+    letter-spacing: .2px;
+    color: #222;
+  }
+  .title .highlight {
+    color: #d64c4c;     
+    font-weight: 700;
+  }
+
+  
+  .content {
+    padding: 18px 12px 28px 12px;
+    min-height: 120px;
+  }
+
+  
+  .nav-row { margin: 0 0 10px 8px; }
+
+  .nav {
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 6px 8px;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.08) inset;
+    border-radius: 3px;
+    cursor: pointer;
+    vertical-align: middle;
+    
+    color: #4b2f7a;
+    background: #cfe9ff;    
+    box-sizing: border-box;
+  }
+
+  
+  .nav.blue {
+    border-color: rgba(70,110,150,0.6);
+  }
+
+  
+  .nav.green {
+    background: #c9f7b9;
+    color: #1f4b1f;
+    border-color: rgba(80,160,80,0.6);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06) inset;
+  }
+
+
+  .nav.green { font-weight: 600; }
+
+
+  .nav-row:first-of-type { margin-top: 6px; }
+</style>
+</head>
+<body>
+
+  
+
+  <div class="frame">
+    <div class="topbar">
+      <div class="title"><span>My </span><span class="highlight">Website</span><span> Navigation</span></div>
+    </div>
+
+    <div class="content">
+      <!-- first (blue) row -->
+      <div class="nav-row">
+        <a class="nav blue" href="#">Home</a>
+        <a class="nav blue" href="#">About</a>
+        <a class="nav blue" href="#">Services</a>
+        <a class="nav blue" href="#">Contact</a>
+      </div>
+
+      <!-- second (green) row -->
+      <div class="nav-row">
+        <a class="nav green" href="#">Dashboard</a>
+        <a class="nav green" href="#">Profile</a>
+        <a class="nav green" href="#">Messages</a>
+        <a class="nav green" href="#">Logout</a>
+      </div>
+    </div>
+  </div>
+  <p> SHREYA SAWAN</p>
+  <P> 2025B15410261</P>
+
+</body>
+</html>

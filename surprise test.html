@@ -1,0 +1,263 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio</title>
+  <style>
+    /* Basic reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#222; background:#f6f7fb; }
+
+    :root{
+      --accent: #0066cc;
+      --muted: #6b6f76;
+      --card-bg: #fff;
+      --radius: 12px;
+      --gap: 1rem;
+    }
+
+    /* Header */
+    header.site-header{
+      background: linear-gradient(0deg, rgba(0,0,0,0.18), rgba(0,0,0,0.08)),
+                  url('https://via.placeholder.com/1600x400?text=Header+Banner') center/cover no-repeat;
+      color: white;
+      padding: 2.25rem 1rem;
+    }
+    .header-inner{
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .brand { display:flex; gap:.75rem; align-items:center; text-decoration:none; color:inherit; }
+    .brand .logo {
+      width:54px; height:54px; background:rgba(255,255,255,0.15);
+      border-radius:10px; display:grid; place-items:center; font-weight:700;
+    }
+    .brand h1 { font-size:1.1rem; line-height:1; }
+    .brand p { font-size:.8rem; color:rgba(255,255,255,0.9); margin-top:2px; }
+
+    nav.site-nav ul{ list-style:none; display:flex; gap:.5rem; }
+    nav.site-nav a{
+      display:inline-block;
+      padding:.5rem .75rem;
+      border-radius:8px;
+      color: white;
+      text-decoration:none;
+      font-weight:600;
+      opacity:0.95;
+    }
+    nav.site-nav a:hover { background: rgba(255,255,255,0.12); }
+
+    /* Main layout */
+    main.container { max-width:1100px; margin: 1.5rem auto; padding: 0 1rem; }
+
+    .intro {
+      display:flex; gap:1.25rem; align-items:center;
+      background: linear-gradient(180deg, #fff, #fbfdff);
+      border-radius: var(--radius); padding:1rem;
+      box-shadow: 0 6px 20px rgba(20,30,60,0.06);
+    }
+    .intro .bio { flex:1; }
+    .intro h2 { margin-bottom:.25rem; font-size:1.25rem; }
+    .intro p { color:var(--muted); margin-bottom:.5rem; }
+    .cta { margin-top:.5rem; }
+    .btn {
+      display:inline-block;padding:.5rem .85rem;border-radius:8px;text-decoration:none;
+      background:var(--accent); color:white; font-weight:600;
+    }
+
+    /* Portfolio grid */
+    section.portfolio { margin-top:1.25rem; }
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap);
+      margin-top: .75rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(20,30,60,0.05);
+      transition: transform .22s ease, box-shadow .22s ease;
+      text-decoration: none;
+      color: inherit;
+      display:flex;
+      flex-direction:column;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow:0 18px 40px rgba(20,30,60,0.08); }
+    .card img { width:100%; height:170px; object-fit:cover; display:block; }
+    .card-content { padding: .75rem 1rem; flex:1; display:flex; flex-direction:column; }
+    .card h3 { font-size:1rem; margin-bottom:.25rem; }
+    .card p { font-size:.9rem; color:var(--muted); margin-bottom:auto; }
+    .card .meta { margin-top:.6rem; font-size:.85rem; color:var(--accent); font-weight:700; }
+
+    /* Skills / About section */
+    .about {
+      margin-top: 1rem;
+      display:flex; gap:1rem; align-items:flex-start;
+      flex-wrap:wrap;
+    }
+    .about .skills{
+      background: var(--card-bg); padding:1rem; border-radius:12px; min-width:220px;
+      box-shadow: 0 6px 18px rgba(20,30,60,0.03);
+    }
+    .skills ul { list-style:none; display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem; }
+    .skills li {
+      padding:.35rem .6rem; border-radius:999px; border:1px solid rgba(0,0,0,0.06);
+      font-weight:600; font-size:.85rem;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      margin-top:1.5rem; padding:1rem; text-align:center; color:var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .header-inner { flex-direction: column; align-items:flex-start; gap:.75rem;}
+    }
+    @media (max-width: 600px){
+      .grid { grid-template-columns: 1fr; }
+      .intro { flex-direction:column; align-items:flex-start; }
+      nav.site-nav ul{ flex-wrap:wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="#">
+        <div class="logo" aria-hidden="true">MP</div>
+        <div>
+          <h1>My Portfolio</h1>
+          <p>Frontend Developer • Designer</p>
+        </div>
+      </a>
+
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="resume.html">Resume</a></li> <!-- dummy external page link -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home" role="main">
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="bio">
+        <h2 id="intro-title">Hi — I'm Shreya</h2>
+        <p>I build clean, accessible front-end experiences and small interactive apps. Below are selected projects, case studies and links to relevant pages.</p>
+        <div class="cta">
+          <a class="btn" href="#portfolio">View Work</a>
+        </div>
+      </div>
+      <div class="headshot" aria-hidden="true">
+        <img src="https://via.placeholder.com/140" alt="Portrait placeholder" style="border-radius:12px;">
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio" aria-labelledby="portfolio-title">
+      <h2 id="portfolio-title" style="margin-top:.75rem;">Selected Projects</h2>
+
+      <div class="grid" role="list">
+        <!-- Card 1 -->
+        <a class="card" href="projects/project1.html" role="listitem">
+          <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Screenshot of Project 1">
+          <div class="card-content">
+            <h3>Project One — Dashboard UI</h3>
+            <p>Interactive admin dashboard with charts and responsive layout.</p>
+            <div class="meta">HTML • CSS • JS</div>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a class="card" href="projects/project2.html" role="listitem">
+          <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Screenshot of Project 2">
+          <div class="card-content">
+            <h3>Project Two — Landing Page</h3>
+            <p>Marketing landing page with animation and A/B friendly structure.</p>
+            <div class="meta">HTML • CSS • Accessibility</div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a class="card" href="projects/project3.html" role="listitem">
+          <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Screenshot of Project 3">
+          <div class="card-content">
+            <h3>Project Three — Interactive Map</h3>
+            <p>Geospatial visualization and custom markers.</p>
+            <div class="meta">JS • Map APIs</div>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a class="card" href="projects/project4.html" role="listitem">
+          <img src="https://via.placeholder.com/600x400?text=Project+4" alt="Screenshot of Project 4">
+          <div class="card-content">
+            <h3>Project Four — E-commerce UI</h3>
+            <p>Product grid and shopping cart interactions.</p>
+            <div class="meta">React • CSS</div>
+          </div>
+        </a>
+
+        <!-- Card 5 -->
+        <a class="card" href="projects/project5.html" role="listitem">
+          <img src="https://via.placeholder.com/600x400?text=Project+5" alt="Screenshot of Project 5">
+          <div class="card-content">
+            <h3>Project Five — Microinteractions</h3>
+            <p>Polished microinteractions and motion design.</p>
+            <div class="meta">Animation • Usability</div>
+          </div>
+        </a>
+
+        <!-- Card 6 -->
+        <a class="card" href="projects/project6.html" role="listitem">
+          <img src="https://via.placeholder.com/600x400?text=Project+6" alt="Screenshot of Project 6">
+          <div class="card-content">
+            <h3>Project Six — Accessibility Audit</h3>
+            <p>Audit examples and fixes for WCAG compliance.</p>
+            <div class="meta">A11y • Testing</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div style="flex:1; min-width:260px;">
+        <h2 id="about-title">About & Contact</h2>
+        <p style="color:var(--muted); margin-top:.5rem;">I'm a frontend-focused developer who enjoys building clean UI systems and accessible experiences. Reach me via the contact page or view the resume link in the header.</p>
+
+        <p style="margin-top:.7rem;">
+          <a href="contact.html" class="btn" id="contact">Contact Me</a>
+        </p>
+      </div>
+
+      <aside class="skills" aria-labelledby="skills-title">
+        <h3 id="skills-title">Skills</h3>
+        <ul class="skills-list" style="margin-top:.5rem;">
+          <li>HTML</li><li>CSS</li><li>JS</li><li>React</li><li>Accessibility</li>
+        </ul>
+        <p style="color:var(--muted); margin-top:.6rem; font-size:.9rem;">Links: <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> • <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      </aside>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year"></span> My Portfolio • Built with semantic HTML & CSS</p>
+    <p style="margin-top:.5rem;"><a href="sitemap.html">Sitemap</a> • <a href="privacy.html">Privacy</a></p>
+  </footer>
+</body>
+</html>

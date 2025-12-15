@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 8</title>
+    <link rel="stylesheet" href="experiment8.css">
+    <style>
+        .html,body{
+    height: 100%;
+    margin: 0;
+    background:black;
+    color: rgba(255,255,255,0.9);
+}
+.stage{
+    min-height: 100%;
+    display: flex;
+    text-align: center;
+    padding: 40px;
+    margin-left: 25%;
+}
+.margin{
+    background: orangered;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+}
+.border{
+    background: darkcyan;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+}
+.padding{
+    background: darkgoldenrod;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    align-items: center;
+}
+.center{
+    background: cyan;
+    width:  400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 2px;
+    text-align: center;
+    justify-content: center;
+}
+.layer{
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 6px;
+}
+.caption{
+    font-weight: 700;
+    font-size: 18px;
+    left: 50%;
+}
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div>
+            <h1><div class="layer">CSS BOX MODEL</div></h1>
+            <div class="margin">
+                <div class="layer">Margin</div>
+                <div class="border">
+                    <div class="layer">Border</div>
+                    <div class="padding">
+                        <div class="layer">Padding</div>
+                        <div class="center">Content</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
